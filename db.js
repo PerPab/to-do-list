@@ -72,7 +72,7 @@ function printNotes(event) {
         notesContainer.innerHTML += `<div id="card-container" class="card card-note animate__animated" style="width: 18rem;">
         <div class="card-header-note">
         <div class="container-title"><h6 id="color-title" class="card-title">${cursor.value.title}</h6></div>
-        <div class="container-trash"><img src='/public/img/delete-icon-2.png' type="button" id="btn-delete-note" class="btn delete-icon" onclick = deleteNote(${cursor.value.id}) ></img></div>
+        <div class="container-trash"><img src='/img/delete-icon-2.png' type="button" id="btn-delete-note" class="btn delete-icon" onclick = deleteNote(${cursor.value.id}) ></img></div>
         </div>
         <div class="card-body">
             <p id="color-text" class="card-text">${cursor.value.detail}</p>
