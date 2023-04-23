@@ -26,7 +26,7 @@ a {
 
 body {
     background: rgb(116,182,219);
-background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 74%);
+    background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 74%);
 }
 .app-container { 
     margin: 0;
@@ -61,9 +61,6 @@ background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 7
 }
 
 
-
-
-
 .btn-text-1 {
     color: white
 }
@@ -89,9 +86,6 @@ background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 7
 .btn-bg-6 {
     background-color: #e2eeb1;
 }
-
-
-
 
 
 .note-title, .note-detail {
@@ -255,3 +249,121 @@ body.swal2-shown > [aria-hidden="true"] {
     transition: 0.1s filter;
     filter: blur(10px);
   }
+
+
+
+
+
+
+
+
+
+  @media (min-width: 600px) { 
+    
+    
+    *{
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    
+
+    .card-header-note{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: #f5f5f5;
+        padding: 5px 10px 5px 10px;
+        border-radius: 10px 10px 0 0;
+        
+    } 
+    
+    .container-title {
+        overflow:hidden;
+    }
+    
+    .container-trash {
+        display: flex;
+        align-items: flex-end;
+        align-self: flex-start;
+    }
+    
+    .card-body {
+        display: flex;
+        padding: 0 10px 0 10px;
+        margin: 5px 0 5px 0;
+        justify-content: start;
+        align-items: start;
+        background-color: #f5f5f5;
+        overflow: hidden;
+        
+    }
+    
+    .card-title {
+        padding: 0;
+        margin: 0; 
+    }
+    .card-text {
+        font-size: 1rem;
+    }
+    .note-detail {
+        font-weight: bold;
+    }
+    .note-title {
+        font-weight: bold;
+     
+        
+    }
+    .text-date {
+        font-size: 0.8rem;
+    }
+    
+    .card-note {
+        margin:1% 1% 1% 1%;
+        padding: 0;
+        max-width: 48%;
+        height: 12rem;
+        background-color: #f5f5f5;
+        
+        
+    }
+    
+    .card-text{
+        inline-size: 100%;
+        overflow-wrap: break-word;
+    }
+    
+    .card-title {
+        inline-size: 100%;
+        overflow-wrap: break-word;
+    }
+    
+    .card-footer-note {
+        background-color: #f5f5f5;
+        border-radius: 0 0 10px 10px;
+        padding: 0;
+        margin: 0;
+    }
+    .text-date {
+        margin: 0;
+        padding: 0px 0px 0px 15px;
+    }
+    
+    
+    
+
+    .delete-icon {
+        width: 40px;
+        padding: 0;
+    }
+
+
+    
+  
+
+    
+    
+   }
