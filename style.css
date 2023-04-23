@@ -52,15 +52,23 @@ background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 7
 .btn-color {
     width: 35px;
     height: 35px;
-    margin: 8px;
+    margin: 4px;
     border: 1px solid black;
 }
 
+.color-title-text{
+    margin: 0;
+}
+
+
+
+
+
 .btn-text-1 {
-    background-color: white;
+    color: white
 }
 .btn-text-2 {
-    background-color: black;
+    color: #364F6B;
 }
 
 .btn-bg-1 {
@@ -81,6 +89,10 @@ background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 7
 .btn-bg-6 {
     background-color: #e2eeb1;
 }
+
+
+
+
 
 .note-title, .note-detail {
     border-radius: 5px;
