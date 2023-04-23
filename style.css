@@ -238,3 +238,8 @@ background: linear-gradient(176deg, rgba(116,182,219,1) 0%, rgba(96,150,180,1) 7
 .text-my-notes {
     margin-left: 1rem;
 }
+
+body.swal2-shown > [aria-hidden="true"] {
+    transition: 0.1s filter;
+    filter: blur(10px);
+  }

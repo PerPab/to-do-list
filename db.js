@@ -36,7 +36,14 @@ function saveNote() {
     let note_title = document.getElementById('note-title').value;
     let note_detail = document.getElementById('note-detail').value;
     if (note_title === '' || note_detail === '') {
-        swal("Complete Title and Detail before save!");
+        Swal.fire({
+            title: 'Complete the title and details before save!',
+            background: '#f5f5f5',
+            color: '#364F6B',
+            timer: 2000,
+            showConfirmButton: false,
+            position: 'top'
+        })
         return;
     }
     let note_date = new Date().toLocaleDateString()
