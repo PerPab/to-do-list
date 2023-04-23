@@ -2,6 +2,8 @@
 let db;
 let notesContainer;
 
+
+
 function startBD() {
     notesContainer = document.getElementById('note-container');
     let btnSaveNote = document.getElementById('btn-save-note');
@@ -10,6 +12,7 @@ function startBD() {
     connection.addEventListener('error', errorEvent);
     connection.addEventListener('success', successEvent);
     connection.addEventListener('upgradeneeded', upgradeEvent);
+
 
 }
 
@@ -32,6 +35,10 @@ function saveNote() {
     let note_ID = Date.now()
     let note_title = document.getElementById('note-title').value;
     let note_detail = document.getElementById('note-detail').value;
+    if (note_title === '' || note_detail === '') {
+        swal("Complete Title and Detail before save!");
+        return;
+    }
     let note_date = new Date().toLocaleDateString()
     let transaction = bd.transaction(['notes'], 'readwrite');
     let notes = transaction.objectStore('notes')
@@ -64,6 +71,14 @@ function print() {
 
 }*/
 
+/*if (!cursor) {
+        notesContainer.innerHTML = `<div class="container-icon">
+                                    <img class="icon-notes" src="/img/happy-1.png">
+                                    <p class="text-icon">not notes found</p>
+                                    </div>`
+
+    }*/
+
 
 function printNotes(event) {
 
@@ -79,22 +94,11 @@ function printNotes(event) {
         </div>
             <div class="card-footer-note text-muted"><p class="text-date">${cursor.value.date}</p></div>
         </div>`
-    } /*else {
-
-        notesContainer.innerHTML = `<div class="container-icon">
-                                    <img class="icon-notes" src="/public/img/happy-1.png">
-                                    <p class="text-icon">not notes found</p>
-                                    </div>`
-
-    }*/
-
-
+    }
 
     if (cursor != null) {
         cursor.continue()
     }
-
-
 
 }
 
@@ -106,6 +110,25 @@ function deleteNote(key) {
     let request = notes.delete(key);
 
 }
+
+function check() {
+    let note_title = document.getElementById('note-title').value;
+    let note_detail = document.getElementById('note-detail').value;
+    let btnSave = document.getElementById('btn-save-note')
+    if (note_title && note_detail != '') {
+        btnSave.classList.add('btn-success')
+    }
+}
+
+function removeClass() {
+    let btnSave = document.getElementById('btn-save-note')
+    btnSave.classList.remove('btn-success')
+}
+
+
+
+
+
 
 
 

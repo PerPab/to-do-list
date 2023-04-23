@@ -19,6 +19,11 @@
         crossorigin="anonymous"></script>
     <script src="./db.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>To Do List</title>
 </head>
 
@@ -45,17 +50,17 @@
                     </div>
                     <div class="modal-body p-2">
                         <div class="container container-note">
-                            <input type="text" id="note-title" class="note-title m-1 form-control"
+                            <input type="text" id="note-title" oninput="check()" class="note-title m-1 form-control"
                                 placeholder="Title..." autofocus required>
-                            <textarea name="note-detail" id="note-detail" placeholder="Details..."
+                            <textarea name="note-detail" oninput="check()" id="note-detail" placeholder="Details..."
                                 class="note-detail m-1 form-control" cols="10" rows="5" required></textarea>
                         </div>
                     </div>
                     <div class="modal-footer p-2">
                         <!--<button type="button" id="btn-color-note " class="btn btn-secondary" data-toggle="modal"
                                 data-target="#select-color">Color</button>-->
-                        <button type="submit" id="btn-save-note" class="btn btn-secondary"
-                            data-dismiss="modal">Save</button>
+                        <button type="submit" id="btn-save-note" class="btn btn-secondary" data-dismiss="modal"
+                            onclick="removeClass()">Save</button>
                     </div>
                 </div>
             </div>
